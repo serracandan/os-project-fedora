@@ -11,13 +11,6 @@ The program consists of 5 main sections, demonstrating key operating system conc
 4. **Race Condition vs. Mutex Synchronization**: Demonstration of data loss under concurrent access and preventing it using `pthread_mutex`.
 5. **Producer-Consumer Pattern**: Bounded-buffer management using POSIX semaphores and mutexes.
 
-## Compilation and Execution
-To compile and run the project on Fedora Linux (GCC 13+), include the POSIX thread library flag:
-
-```bash
-gcc -Wall -Wextra -o os_project os_project.c -lpthread
-./os_project
-
 ## Technical Summary Table
 | Section | System Call / API | Fedora/Linux Feature |
 | :--- | :--- | :--- |
@@ -35,3 +28,13 @@ Unsafe (No Mutex): Expected: 800,000 | Actual: 686,087 | Lost: 113,913 (Race con
 Safe (With Mutex): Expected: 800,000 | Actual: 800,000 | Lost: 0 (Race condition prevented)
 
 Course Project for ACM369 - Operating Systems I (Spring 2026) 
+
+## Compilation and Execution
+To compile and run the project on Fedora Linux (GCC 13+), include the POSIX thread library flag:
+```bash
+gcc -Wall -Wextra -o os_project os_project.c -lpthread
+./os_project
+
+
+
+
